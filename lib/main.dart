@@ -144,11 +144,22 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               style: ElevatedButton.styleFrom(
                 primary: Colors.teal,
                 onPrimary: Colors.white,
-                onSurface: Colors.grey,
+                onSurface: Colors.grey[300],
                 padding: EdgeInsets.all(10.0),
               ),
               onPressed: () {},
-              child: const Text('Active'),
+              child: const Text(
+                'Active',
+                style: TextStyle(
+                  shadows: [
+                    Shadow(
+                      blurRadius: 10.0,
+                      color: Colors.black,
+                      offset: Offset(5.0, 5.0),
+                    ),
+                  ],
+                ),
+              ),
             ),
             Expanded(
               flex: 1,
@@ -160,10 +171,21 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               style: ElevatedButton.styleFrom(
                 primary: Colors.teal,
                 onPrimary: Colors.white,
-                onSurface: Colors.grey,
+                onSurface: Colors.grey[300],
               ),
               onPressed: () {},
-              child: const Text('Stories'),
+              child: const Text(
+                'Stories',
+                style: TextStyle(
+                  shadows: [
+                    Shadow(
+                      blurRadius: 10.0,
+                      color: Colors.black,
+                      offset: Offset(5.0, 5.0),
+                    ),
+                  ],
+                ),
+              ),
             ),
             Expanded(
               flex: 2,
